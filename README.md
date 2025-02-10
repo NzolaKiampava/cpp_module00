@@ -61,7 +61,7 @@ Compilation flags:
 
 Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/NzolaKiampava/cpp_module00.git
 cd cpp_module_00
 ```
 
