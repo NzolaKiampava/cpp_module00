@@ -62,7 +62,7 @@ Compilation flags:
 Clone the repository:
 ```bash
 git clone https://github.com/NzolaKiampava/cpp_module00.git
-cd cpp_module_00
+cd cpp_module00
 ```
 
 ## Usage
