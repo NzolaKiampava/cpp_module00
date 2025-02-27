@@ -1,6 +1,6 @@
 NAME = dream_job
 
-SRCS = Account.cpp tests.cpp Account.hpp
+SRCS = Account.cpp tests.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
