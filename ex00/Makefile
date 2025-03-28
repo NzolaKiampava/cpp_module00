@@ -3,28 +3,33 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nkiampav <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: nkiampav <nkiampav@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/29 16:34:18 by nkiampav          #+#    #+#              #
-#    Updated: 2025/01/29 16:34:20 by nkiampav         ###   ########.fr        #
+#    Updated: 2025/03/28 16:02:05 by nkiampav         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
-CXX = g++
-CXXFLAGS = -Wall -Wextra -Werror
+
+SRCS = megaphone.cpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-cpp: megaphone.cpp
-	$(CXX) $(CXXFLAGS) megaphone.cpp -o $(NAME)
+$(NAME): $(OBJS)
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -f $(NAME)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: all clean fclean re
